@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvEmpty"
+            android:layout_width="220dp"
+            android:layout_height="55dp"
+            android:layout_marginBottom="92dp"
+            android:gravity="center"
+            android:text="No Notes"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/lblMonth"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="#014FB3"
+            android:textSize="40dp" />
+
+        <com.github.sundeepk.compactcalendarview.CompactCalendarView
+            android:id="@+id/compactcalendar_view"
+            android:layout_width="350dp"
+            android:layout_height="220dp"
+            android:layout_marginBottom="9dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:compactCalendarBackgroundColor="@color/toolbar_color"
+            app:compactCalendarCurrentDayBackgroundColor="#383838"
+            app:compactCalendarCurrentSelectedDayBackgroundColor="#99bab3"
+            app:compactCalendarMultiEventIndicatorColor="#fff"
+            app:compactCalendarTargetHeight="250dp"
+            app:compactCalendarTextColor="#ffffff"
+            app:compactCalendarTextSize="12sp"
+            android:padding="20dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/lblDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="TextView"
+            android:textColor="#014FB3"
+            android:textSize="20dp"
+            tools:layout_editor_absoluteY="300dp" />
+
+        <ListView
+            android:id="@+id/lvEvents"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteY="358dp" />
+
+    </LinearLayout>
+
+</FrameLayout>
